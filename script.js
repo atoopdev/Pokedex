@@ -13,10 +13,10 @@ async function getPokemon(){
 
 getPokemon().then(pokemon =>{
     console.log(pokemon)
-    document.getElementById("grid").innerHTML = `<div class="pokemon-category"><div>ID</div><div class="">English Name</div><div class="">Type</div><div class="">HP</div><div class="">Attack</div><div class="">Defense</div><div class="">Speed</div></div>
+    document.getElementById("grid").innerHTML = `<div class="pokemon-category"><div>ID</div><div class="">English Name</div><div class="">Type</div></div>
     ${pokemon.map(getPokemonHTML).join('')}`
 })
 
 function getPokemonHTML(indivPokemon){
-    return `<div class="pokemon-listing"><div class="id">${indivPokemon.id}</div> <div class="name">${indivPokemon.name.english}</div> <div class="type">${indivPokemon.type}</div> <div class="hp">${indivPokemon.base.HP}</div> <div class="attack">${indivPokemon.base.Attack}</div> <div class="defense">${indivPokemon.base.Defense}</div> <div class="speed">${indivPokemon.base.Speed}</div></div>` 
+    return `<div class="pokemon-listing"><div class="pokemon-id">${indivPokemon.id}</div> <div class="pokemon-name">${indivPokemon.name.english}</div> <div class="pokemon-type">${indivPokemon.type.join(' / ')}</div> <div class="pokemon-stat">HP: ${indivPokemon.base.HP}</div> <div class="pokemon-stat">Attack: ${indivPokemon.base.Attack}</div> <div class="pokemon-stat">Defense: ${indivPokemon.base.Defense}</div> <div class="pokemon-stat">Speed: ${indivPokemon.base.Speed}</div></div>` 
 }
