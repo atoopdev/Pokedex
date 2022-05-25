@@ -1,71 +1,69 @@
 /* takes content size, padding, and border into account when determing size of content */
 * {
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 400;
-    color: black;
-    background-color: white;
-  }
-  
-  /* remove margins on typography to keep margins consistent */
-  h1,
-  h2,
-  h3,
-  p {
-    margin: 0;
-  }
+  box-sizing: border-box;
+}
 
-  .main-area{
-      max-width: 600px;
-      margin: 0 auto;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  background-color: white;
+}
 
-  .pokemon-category{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr;
-      
-     
-  }
+/* remove margins on typography to keep margins consistent */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 
-  .pokemon-listing{
-    display: grid;
-    grid-template-columns: repeat(12, calc(100%/12));
-    margin: 0.5em;
-    /* grid-gap: 1em; */
-  }
+.main-area {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-  .pokemon-*{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid black;
-  }
+.pokemon-category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
 
-  .pokemon-id{
-      background-color: lightblue;
-      grid-column: span 2;
-  }
+.pokemon-listing {
+  display: grid;
+  grid-template-columns: repeat(12, calc(100% / 12));
+  margin: 0.5em;
+  /* grid-gap: 1em; */
+}
 
-  .pokemon-name{
-      grid-column: span 5;
-      background-color: lightyellow;
-  }
+.pokemon-* {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
 
-  .pokemon-type{
-      grid-column: span 5;
-  }
+.pokemon-id {
+  background-color: lightblue;
+  grid-column: span 2;
+}
 
-  .pokemon-stat{
-      background-color: lightpink;
-      grid-column: span 3;
-  }
+.pokemon-name {
+  grid-column: span 5;
+  background-color: lightyellow;
+}
 
-  
+.pokemon-type {
+  grid-column: span 5;
+}
 
+.pokemon-stat {
+  background-color: lightpink;
+  grid-column: span 3;
+}
+.pokemon-add-names {
+  grid-column: span 4;
+}
