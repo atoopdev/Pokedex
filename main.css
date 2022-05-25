@@ -1,0 +1,44 @@
+/* takes content size, padding, and border into account when determing size of content */
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+  }
+  
+  /* remove margins on typography to keep margins consistent */
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  .main-area{
+      max-width: 700px;
+      margin: 0 auto;
+  }
+
+  .pokemon-category{
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 1fr;
+      
+      border: 1px solid black;
+  }
+
+  .pokemon-listing{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1em;
+  }
+
+  
+
